@@ -4,9 +4,10 @@ stages:
     cmd: python src/split.py
     deps:
     - path: data/raw/train
-      md5: ee9a5fa8b7c214877a3e15872145e214.dir
-      size: 190372427
-      nfiles: 31782
+      hash: md5
+      md5: 976645e56d5639bc6ae3e6d3cbbeaef6.dir
+      size: 171677684
+      nfiles: 28621
     - path: src/split.py
       md5: 93dceb6c24db44d128846932baf3536c
       size: 1469
@@ -15,9 +16,10 @@ stages:
         split.ratio: 0.1
     outs:
     - path: data/raw/test
-      md5: e55bba4644fd63d464b55db34404d17c.dir
-      size: 21086056
-      nfiles: 3507
+      hash: md5
+      md5: df35163f3782efe2185eb1e3083a718b.dir
+      size: 18694743
+      nfiles: 3161
   preprocess:
     cmd: python src/preprocess.py
     deps:

@@ -5,6 +5,7 @@ from skimage.restoration import denoise_tv_chambolle
 from pathlib import Path
 from tqdm import tqdm
 from dvc.api import params_show
+import numpy as np
 
 DATA_DIR = Path("data")
 train_dir = DATA_DIR / "raw" / "train"
@@ -20,6 +21,9 @@ def save_image(image_array, image_path):
     target_path = str(image_path).replace("raw", "prepared")
     Path(target_path).parent.mkdir(parents=True, exist_ok=True)
 
+    # Convert from float [0, 1] to uint8 [0, 255]
+    image_array = (image_array * 255).astype(np.uint8)
+    
     imsave(target_path, image_array)
 
 
@@ -38,7 +42,7 @@ def denoise_image(image_path, weight):
     Denoise image using total variation filter.
     """
     image = imread(image_path) / 255.0
-    image = denoise_tv_chambolle(image, weight=weight, multichannel=True)
+    image = denoise_tv_chambolle(image, weight=weight, channel_axis=-1)
 
     save_image(image, image_path)
 

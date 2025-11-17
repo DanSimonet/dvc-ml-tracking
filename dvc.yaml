@@ -31,3 +31,8 @@ stages:
         cache: false
     plots:
     - evaluation/plots
+metrics:
+- evaluation/metrics.json
+plots:
+- evaluation/plots/metrics:
+    x: step
