@@ -23,8 +23,6 @@ stages:
     - data
     - src/train.py
     outs:
-    - evaluation/report.html:
-        cache: false
     - models
     metrics:
     - evaluation/metrics.json:

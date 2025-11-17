@@ -48,24 +48,25 @@ stages:
     cmd: python src/train.py
     deps:
     - path: data
-      md5: fda2c87b3deae8126a36c43dd6a7e603.dir
-      size: 362914783
-      nfiles: 70580
+      hash: md5
+      md5: 3c64eddef8e258ff217f85948a145d56.dir
+      size: 327752399
+      nfiles: 63566
     - path: src/train.py
       md5: 6b511e9b9291fdaa030d800d03f0d80d
       size: 3747
     outs:
     - path: evaluation/metrics.json
-      md5: d526f8607af42b33112e4c34e403ebc6
-      size: 367
+      hash: md5
+      md5: 404e6bbc0e6250aed9e5e02ad7f6cc54
+      size: 368
     - path: evaluation/plots
-      md5: 12d69b686b14e9cc9f04baf5af8bcf2d.dir
-      size: 989
+      hash: md5
+      md5: 64e9f5a5c5094318ef7bf6c5be1e83a0.dir
+      size: 940
       nfiles: 8
-    - path: evaluation/report.html
-      md5: 82c3dfd04c1411f8ab75fe46472dc4cc
-      size: 27494
     - path: models
-      md5: 9b9da8469b9844e3adec4d4082e5d437.dir
-      size: 44363432
+      hash: md5
+      md5: c333c6378b48aed9eaa2f41443fcd397.dir
+      size: 44348118
       nfiles: 1
